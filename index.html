@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>والله اسف قمر </title>
+  <meta name="description" content="رسالة اعتذار من القلب ليا قمر الحلوة" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Amiri:wght@400;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== PARTICLES CANVAS ===== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===== INTRO SCREEN ===== -->
+  <section id="intro-screen">
+    <div class="intro-bg-blur"></div>
+    <div class="floating-hearts-intro" id="floating-hearts-intro"></div>
+    <div class="intro-content">
+      <div class="moon-icon">🌙</div>
+      <h1 id="intro-text" class="intro-title"></h1>
+      <p class="intro-subtitle"> قمر...</p>
+      <button id="start-btn" class="start-btn" onclick="startSlideshow()">
+        <span>بس خل اكلج</span>
+        <span class="btn-arrow">💫</span>
+      </button>
+    </div>
+    <div class="scroll-hint">دوسي حتى تشوفين</div>
+  </section>
+
+  <!-- ===== SLIDESHOW SECTION ===== -->
+  <section id="slideshow-section" class="hidden">
+
+    <!-- Slideshow Header -->
+    <div class="slideshow-header">
+      <div class="header-title">ليش لازم متزعلين مني؟ 🥺</div>
+      <div class="slide-counter">
+        <span id="current-slide-num">1</span> / <span id="total-slides-num">7</span>
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar-container">
+      <div class="progress-bar" id="progress-bar"></div>
+    </div>
+
+    <!-- Slides Container -->
+    <div class="slides-wrapper" id="slides-wrapper">
+
+      <!-- Slide 1 -->
+      <div class="slide active" id="slide-1" data-index="0">
+        <div class="slide-bg slide-bg-1"></div>
+        <div class="slide-deco">
+          <span class="deco-emoji float-1">💖</span>
+          <span class="deco-emoji float-2">✨</span>
+          <span class="deco-emoji float-3">🌸</span>
+          <span class="deco-emoji float-4">💕</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-number-badge">السبب الأول</div>
+          <div class="slide-icon big-icon">🥺</div>
+          <h2 class="slide-title">لان اني خطية</h2>
+          <p class="slide-desc">الله عليج مو خطية... مو؟ </p>
+          <div class="slide-emphasis">مو ؟</div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="slide" id="slide-2" data-index="1">
+        <div class="slide-bg slide-bg-2"></div>
+        <div class="slide-deco">
+          <span class="deco-emoji float-1">📚</span>
+          <span class="deco-emoji float-2">😩</span>
+          <span class="deco-emoji float-3">⏰</span>
+          <span class="deco-emoji float-4">😭</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-number-badge">السبب الثاني</div>
+          <div class="slide-icon big-icon">😔</div>
+          <h2 class="slide-title">لان عندي امتحان الصبح</h2>
+          <p class="slide-desc">وزعلج ميخليني ادرس ... يعني ذنبج انتي!</p>
+          <div class="slide-emphasis">حرسب من وراج</div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="slide" id="slide-3" data-index="2">
+        <div class="slide-bg slide-bg-3"></div>
+        <div class="slide-deco">
+          <span class="deco-emoji float-1">😍</span>
+          <span class="deco-emoji float-2">🌹</span>
+          <span class="deco-emoji float-3">💞</span>
+          <span class="deco-emoji float-4">✨</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-number-badge">السبب الثالث</div>
+          <div class="slide-icon big-icon">🌹</div>
+          <h2 class="slide-title">لان انتي حلوة</h2>
+          <p class="slide-desc">والحلوين ما يزعلون... هذا قانون طبيعي</p>
+          <div class="slide-emphasis">وحق الله تخبلين</div>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide" id="slide-4" data-index="3">
+        <div class="slide-bg slide-bg-4"></div>
+        <div class="slide-deco">
+          <span class="deco-emoji float-1">🐱</span>
+          <span class="deco-emoji float-2">😹</span>
+          <span class="deco-emoji float-3">🏠</span>
+          <span class="deco-emoji float-4">😔</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-number-badge">السبب الرابع</div>
+          <div class="slide-icon big-icon">😞</div>
+          <h2 class="slide-title">حكمز من السطح</h2>
+          <p class="slide-desc">وانتي بعد بكيفج...</p>
+          <div class="slide-emphasis">تقبلين اكمز ؟</div>
+        </div>
+      </div>
+
+      <!-- Slide 5 -->
+      <div class="slide" id="slide-5" data-index="4">
+        <div class="slide-bg slide-bg-5"></div>
+        <div class="slide-deco">
+          <span class="deco-emoji float-1">⚖️</span>
+          <span class="deco-emoji float-2">🚨</span>
+          <span class="deco-emoji float-3">😱</span>
+          <span class="deco-emoji float-4">🔍</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-number-badge">السبب الخامس</div>
+          <div class="slide-icon big-icon">😱</div>
+          <h2 class="slide-title">من اكمز راح تتهمين بجريمة اغتيال</h2>
+          <p class="slide-desc">ومحتاجة شاهد ودفاع... وانا مو هناك </p>
+          <div class="slide-emphasis">فكري بيها! </div>
+        </div>
+      </div>
+
+      <!-- Slide 6 -->
+      <div class="slide" id="slide-6" data-index="5">
+        <div class="slide-bg slide-bg-6"></div>
+        <div class="slide-deco">
+          <span class="deco-emoji float-1">💝</span>
+          <span class="deco-emoji float-2">🤗</span>
+          <span class="deco-emoji float-3">☺️</span>
+          <span class="deco-emoji float-4">💌</span>
+        </div>
+        <div class="slide-content">
+          <div class="slide-number-badge">السبب السادس</div>
+          <div class="slide-icon big-icon">💌</div>
+          <h2 class="slide-title">لا كافي المهم شلونج</h2>
+          <p class="slide-desc">والله اني خوش ولد عيب عليج </p>
+          <div class="slide-emphasis">اكيد تتفقين انو اني خوش ولد</div>
+        </div>
+      </div>
+
+      <!-- Final Slide -->
+      <div class="slide final-slide" id="slide-7" data-index="6">
+        <div class="slide-bg slide-bg-final"></div>
+        <div class="hearts-explosion" id="hearts-explosion"></div>
+        <div class="slide-content final-content">
+          <div class="final-moon">🌙</div>
+          <h2 class="final-title">يلا سامحيني</h2>
+          <div class="final-heart">❤️</div>
+          <p class="final-desc">يا أحلى وحدة بالدنيا كلها...</p>
+          <p class="final-subdesc">ما راح اسوي شي يزعلج بعد (احاول)... بس هلمرة مشيها </p>
+          <div class="final-buttons">
+            <button class="forgive-btn" id="forgive-yes" onclick="handleForgive(true)">سامحتك 💖</button>
+            <button class="not-forgive-btn" id="forgive-no" onmouseover="runAway(this)"
+              onclick="handleForgive(false)">لا 😤</button>
+          </div>
+          <div id="forgiven-msg" class="forgiven-msg hidden">
+            <div class="forgiven-icon">🎉</div>
+            <p> بس والله انتي احسن شي بلحياة 💕<br />حدزلج هذا وانام</p>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end slides-wrapper -->
+
+    <!-- Navigation Buttons -->
+    <div class="nav-buttons">
+      <button class="nav-btn prev-btn" id="prev-btn" onclick="changeSlide(-1)" disabled>
+        <span>→</span> السابق
+      </button>
+      <div class="slide-dots" id="slide-dots"></div>
+      <button class="nav-btn next-btn" id="next-btn" onclick="changeSlide(1)">
+        التالي <span>←</span>
+      </button>
+    </div>
+
+  </section><!-- end slideshow-section -->
+
+  <!-- Music toggle (optional) -->
+  <button class="music-btn" id="music-btn" onclick="toggleMusic()" title="موسيقى">🎵</button>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
